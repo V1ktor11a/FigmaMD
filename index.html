@@ -17,54 +17,62 @@
     <header>
       <!--Navbar-->
       <!--Lightning-->
-      <div class="container sec-header">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container-fluid">
-            <a class="navbar-brand order-1" href="#">
-              <img src="/image/logo_dark.png" alt="" />
-            </a>
-            <button type="button" class="order-2 order-md-3 btn-size btn-login">
-              Login
-            </button>
-            <button
-              class="navbar-toggler order-3 toggler-new"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <img src="/image/toggler.png" alt="" />
-              <!---->
-            </button>
-            <div
-              class="collapse navbar-collapse order-4 order-md-2"
-              id="navbarSupportedContent"
-            >
-              <ul
-                class="navbar-nav me-auto mb-2 mb-lg-0 text-end text-md-center"
+      <div class="container">
+        <div class="sec-header">
+          <nav class="navbar navbar-expand-lg navbar-light g-0">
+            <div class="container-fluid">
+              <a class="navbar-brand order-1" href="#">
+                <img src="/image/logo_dark.png" alt="" />
+              </a>
+              <div
+                class="btn-width order-2 order-md-3 d-flex justify-content-end"
               >
-                <li class="nav-item">
-                  <a class="nav-link text-end text-md-center" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-end text-md-center" href="#"
-                    >Product</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-end text-md-center" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-end text-md-center" href="#"
-                    >Contact</a
-                  >
-                </li>
-              </ul>
+                <button type="button" class="btn-login">Login</button>
+              </div>
+              <button
+                class="navbar-toggler order-3 toggler-new"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <img src="/image/toggler.png" alt="" />
+                <!---->
+              </button>
+              <div
+                class="collapse navbar-collapse order-4 order-md-2"
+                id="navbarSupportedContent"
+              >
+                <ul
+                  class="navbar-nav me-auto mb-2 mb-lg-0 text-end text-md-center"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link text-end text-md-center" href="#"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-end text-md-center" href="#"
+                      >Product</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-end text-md-center" href="#"
+                      >About</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-end text-md-center" href="#"
+                      >Contact</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </nav>
+          </nav>
+        </div>
         <div class="row text-center">
           <div class="col-12 lightning-text-big d-flex justify-content-center">
             <h5 class="lightning-text-big-h5">Lightning fast prototyping</h5>
@@ -108,41 +116,32 @@
       <div class="container sec-fastest">
         <div class="row text-center">
           <div class="col-12"><h3 class="yellow-color">Just type</h3></div>
-        </div>
-
-        <div class="col-12 fastest-text-big text-center">
-          <h2>Fastest way to navigate</h2>
-        </div>
-
-        <div
-          class="col-12 d-flex justify-content-center fastest-text-small text-center"
-        >
-          <h4 class="fastest-text-small-h3">
-            Most calendars are designed for teams. Slate is designed for
-            freelancers.
-          </h4>
-        </div>
-
-        <div
-          class="row g-0 d-flex flex-column flex-md-row align-self-center align-items-center justify-content-center"
-        >
-          <div
-            class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end"
-          >
-            <button
-              type="button"
-              class="btn-size btn-blue fw-bold fastest-btn fastest-btn-mg"
-            >
-              Download
-            </button>
+          <div class="col-12 fastest-text-big text-center">
+            <h2>Fastest way to navigate</h2>
           </div>
 
           <div
-            class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start"
+            class="col-12 d-flex justify-content-center fastest-text-small text-center"
+          >
+            <h4 class="fastest-text-small-h3">
+              Most calendars are designed for teams. Slate is designed for
+              freelancers.
+            </h4>
+          </div>
+
+          <div
+            class="col d-flex flex-column flex-md-row justify-content-center align-items-center"
           >
             <button
               type="button"
-              class="btn-size btn-blue-outline fw-bold fastest-btn"
+              class="btn-size btn-blue fw-bold fastest-btn-b fastest-btn-mg"
+            >
+              Download
+            </button>
+
+            <button
+              type="button"
+              class="btn-size btn-blue-outline fw-bold fastest-btn-o"
             >
               See Walkthrough
             </button>
@@ -150,12 +149,14 @@
         </div>
       </div>
       <!--OpenType-->
-      <div class="container sec-open-t">
-        <div class="row g-0">
+      <div class="container">
+        <div class="row g-0 sec-open-t">
           <div
-            class="col-12 col-md-6 order-2 order-md-1 sec-open-text d-flex flex-column align-items-center justify-content-center align-items-md-end"
+            class="col d-flex flex-column flex-md-row justify-content-center align-items-center"
           >
-            <div class="text-center text-md-start">
+            <div
+              class="order-2 order-md-1 sec-open-text d-flex flex-column align-items-center align-items-md-start justify-content-center text-center text-md-start"
+            >
               <h3>OpenType features</h3>
               <h4 class="sec-open-text-small-ot">
                 Most calendars are designed for teams. Slate is designed for
@@ -163,27 +164,29 @@
               </h4>
               <a class="blue-color" href="#">LEARN MORE</a>
             </div>
-          </div>
-          <div class="col-12 col-md-6 order-1 order-md-2 open-t-img">
-            <picture>
-              <source
-                media="(max-width: 768px)"
-                srcset="/image/screen_notebook_mobile.png"
-                sizes=""
-              />
-              <img src="/image/screen_notebook_desktop.png" alt="" />
-            </picture>
+            <div class="order-1 order-md-2 open-t-img">
+              <picture>
+                <source
+                  media="(max-width: 768px)"
+                  srcset="/image/screen_notebook_mobile.png"
+                  sizes=""
+                />
+                <img src="/image/screen_notebook_desktop.png" alt="" />
+              </picture>
+            </div>
           </div>
         </div>
       </div>
 
       <!--Variable fonts-->
-      <div class="container sec-open-t">
-        <div class="row g-0">
+      <div class="container">
+        <div class="row g-0 sec-open-vf">
           <div
-            class="col-12 col-md-6 order-2 sec-open-text-vf d-flex flex-column align-items-center align-items-md-start"
+            class="col d-flex flex-column flex-md-row justify-content-center align-items-center"
           >
-            <div class="text-center text-md-start">
+            <div
+              class="order-2 sec-open-text-vf d-flex flex-column align-items-center align-items-md-start text-center text-md-start"
+            >
               <h3>Variable fonts</h3>
               <h4 class="sec-open-text-small">
                 Most calendars are designed for teams. Slate is designed for
@@ -191,16 +194,16 @@
               </h4>
               <a class="blue-color" href="#">LEARN MORE</a>
             </div>
-          </div>
-          <div class="col-12 col-md-6 order-1 open-t-img-vf">
-            <picture>
-              <source
-                media="(max-width: 768px)"
-                srcset="/image/screen_fonts_mobile.png"
-                sizes=""
-              />
-              <img src="/image/screen_fonts_desktop.png" alt="" />
-            </picture>
+            <div class="order-1 open-t-img-vf">
+              <picture>
+                <source
+                  media="(max-width: 768px)"
+                  srcset="/image/screen_fonts_mobile.png"
+                  sizes=""
+                />
+                <img src="/image/screen_fonts_desktop.png" alt="" />
+              </picture>
+            </div>
           </div>
         </div>
       </div>
@@ -266,7 +269,7 @@
             </div>
           </div>
           <div>
-            <button type="button" class="btn-size btn-blue">
+            <button type="button" class="btn-size btn-size-t btn-blue fw-bold">
               All Testimonials
             </button>
           </div>
@@ -310,7 +313,7 @@
               >
                 Most calendars are designed for teams.
               </p>
-              <button type="button" class="btn-size btn-blue">
+              <button type="button" class="btn-size btn-blue fw-bold">
                 Get Started
               </button>
             </div>
@@ -356,8 +359,8 @@
 
     <!--Footer-->
     <footer>
-      <div class="container sc-footer">
-        <div class="row g-0">
+      <div class="container">
+        <div class="row g-0 sc-footer">
           <div class="col-12 col-md-3 text-center text-md-start footer-img">
             <a href="#">
               <img src="/image/logo_dark.png" />
