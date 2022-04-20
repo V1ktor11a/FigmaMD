@@ -11,7 +11,12 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="slick/slick/slick.css" />
+    <link rel="stylesheet" href="slick/slick/slick-theme.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
   </head>
   <body>
     <header>
@@ -89,7 +94,7 @@
         </div>
         <div class="row lightning-btn">
           <div class="col d-flex justify-content-end">
-            <button type="button" class="btn-size btn-blue">Get Started</button>
+            <button id="modalBtn" type="button" class="btn-size btn-blue">Get Started</button>
           </div>
           <div class="col">
             <button type="button" class="btn-size btn-white">
@@ -326,7 +331,7 @@
         <div class="row g-0">
           <div class="col-12 col-md-6">
             <div
-              class="ergonomic-first d-flex justify-content-center justify-content-md-start"
+              class="ergonomic-first d-flex justify-content-center justify-content-md-end"
             >
               <h3 class="ergonomic-h3 text-center text-md-start">
                 We focus on ergonomic meeting
@@ -355,22 +360,86 @@
           </div>
         </div>
       </div>
+      <!-- Slider-->
+      <div class="container">
+        <div class="row g-o">
+          <div class="col">
+            <div class="slider">
+              <div class="slide">
+                <div class="imgSlider">
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="/image/m_1.jpg"
+                      sizes="" />
+                    <img src="/image/d_1.jpg" alt=""
+                  /></picture>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="imgSlider">
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="/image/m_2.jpg"
+                      sizes="" />
+                    <img src="/image/d_2.jpg" alt=""
+                  /></picture>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="imgSlider">
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="/image/m_3.jpg"
+                      sizes="" />
+                    <img src="/image/d_3.jpg" alt=""
+                  /></picture>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="imgSlider">
+                  <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="/image/m_4.jpg"
+                      sizes="" />
+                    <img src="/image/d_4.jpg" alt=""
+                  /></picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Map-->
+      <div class="container">
+        <div class="row ">
+          <div class="col-12 col-lg-10 offset-lg-1">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
     </main>
+
+ 
 
     <!--Footer-->
     <footer>
       <div class="container">
         <div class="row g-0 sc-footer">
-          <div class="col-12 col-md-3 text-center text-md-start footer-img">
+          <div class="col-12 col-lg-3 text-center text-lg-start footer-img">
             <a href="#">
               <img src="/image/logo_dark.png" />
             </a>
             <p class="sm18-lh28">Just type what's on your mind</p>
           </div>
 
-          <div class="col-12 col-md-6 d-flex justify-content-center">
+          <div class="col-12 col-lg-6 d-flex justify-content-center">
             <nav
-              class="nav nav-footer d-flex flex-column flex-md-row align-items-center justify-content-center"
+              class="nav nav-footer d-flex flex-column flex-lg-row align-items-center justify-content-center"
             >
               <a class="nav-link" href="#">Home</a>
               <a class="nav-link" href="#">Product</a>
@@ -380,10 +449,10 @@
           </div>
 
           <div
-            class="col-12 col-md-3 d-flex justify-content-center align-items-center justify-content-md-end"
+            class="col-12 col-lg-3 d-flex justify-content-center align-items-center justify-content-lg-end"
           >
             <nav
-              class="nav footer-social d-flex justify-content-center justify-content-md-end"
+              class="nav footer-social d-flex justify-content-center justify-content-lg-end"
             >
               <a class="nav-link" href="#"
                 ><img src="/image/design_twitter.png" alt=""
@@ -400,10 +469,92 @@
       </div>
     </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+       <!--Form-->
+       <div id="modal" >
+        <div class="formR container">
+          <div class="row g-0 form-pd">
+            <div class="col-9 d-flex justify-content-start">
+              <h3 class="fst-normal fw-bold">Registration form</h3>
+            </div>
+            <div class="col-3 d-flex justify-content-end">
+              <button type="button" class="btn-icon closeBtn">
+                <img src="/image/close-icon.png" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="row g-0 form-mg">
+            <form id="form" action="#">
+              <label for="name" class="col-12">Name</label>
+              <input
+                type="text"
+                id="name"
+                minLength="2"
+                maxLength="20"
+                required
+                name="user_name"
+                class="col-12 form-size"
+              />
+              <label for="mail" class="col-12">E-mail address</label>
+              <input
+                type="email"
+                id="mail"
+                required
+                name="user_mail"
+                class="col-12 form-size"
+              />
+              <div class="form-check col-12 checkbox-icon">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="checkbox"
+                />
+                <label
+                  class="form-check-label checkbox-text"
+                  for="checkbox"
+                >
+                  I agree to the terms
+                </label>
+              </div></div>
+              <div class="row g-0">
+                <div class="col">
+                  <button id="form-submit" type="submit" disabled class="form-btn btn-size form-btn-mg col-12">
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+            </form>
+          
+        </div>
+      </div>
+
+<div class="cookie">
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+      <div>
+      <p class="sm18-lh28 fst-normal fw-600 text-center text-md-start">You should accept to collect our cookies to work with this site.</p>
+      <p class="sm18-lh28 fst-normal fw-normal cookie-text">* This message will be shown only once if you will click the ‘I agree’ button.
+        Thank you in advance. </p>
+      </div>
+      <div>
+        <button type="button" class="btn-cookie"> I AGREE </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <script
+ src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+ <script src="slick/jquery-1.11.0.min.js"></script>
+ <script src="slick/jquery-migrate-1.2.1.min.js"></script>
+ <script src="slick/slick/slick.min.js"></script>
+ <script src="main.js"></script>
+ <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+ <script src="main2.js"></script>
   </body>
 </html>
